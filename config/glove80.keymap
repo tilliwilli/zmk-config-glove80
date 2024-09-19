@@ -211,12 +211,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&mt F11 F1  &mt F12 F2    &kp F3       &kp F4        &kp F5                                                                                                                   &kp F6       &kp F7        &kp F8       &kp F9            &kp F10
-&kp GRAVE   &kp N1        &kp N2       &kp N3        &kp N4       &kp N5                                                                                              &kp N6  &kp N7       &kp N8        &kp N9       &kp N0            &kp BACKSLASH
-&none       &kp Q         &kp W        &kp L         &kp D        &kp P                                                                                               &kp J   &kp M        &kp O         &kp Y        &kp SINGLE_QUOTE  &none
-&kp EQUAL   &hml LCTRL A  &hml LALT S  &hml LSHFT R  &hml LGUI T  &kp G                                                                                               &kp F   &hmr RGUI N  &hmr RSHFT E  &hmr RALT I  &hmr RCTRL U      &kp MINUS
-&none       &lt 4 X       &kp Z        &kp K         &kp C        &kp V   &hypermo_sk 3 LSHFT  &lt 2 LEFT_BRACKET  &none       &none    &kp RIGHT_BRACKET  &sk RSHFT  &kp B   &kp H        &comma_morph  &dot_morph   &lt 5 SLASH       &none
-&magic 6 0  &kp HOME      &kp END      &kp LEFT      &kp RIGHT            &lt 5 BACKSPACE      &lt 1 ESCAPE        &kp DELETE  &kp TAB  &kp RETURN         &kp SPACE          &kp DOWN     &kp UP        &kp PAGE_UP  &kp PAGE_DOWN     &none
+&mt F11 F1  &mt F12 F2    &kp F3       &kp F4        &kp F5                                                                                                                   &kp F6       &kp F7        &kp F8         &kp F9            &kp F10
+&kp GRAVE   &kp N1        &kp N2       &kp N3        &kp N4       &kp N5                                                                                              &kp N6  &kp N7       &kp N8        &kp N9         &kp N0            &kp BACKSLASH
+&none       &kp Q         &kp W        &kp L         &kp D        &kp P                                                                                               &kp J   &kp M        &kp O         &kp Y          &kp SINGLE_QUOTE  &none
+&kp EQUAL   &hml LCTRL A  &hml LALT S  &hml LSHFT R  &hml LGUI T  &kp G                                                                                               &kp F   &hmr RGUI N  &hmr RSHFT E  &hmr RALT I    &hmr RCTRL U      &kp MINUS
+&none       &lt 4 X       &kp Z        &kp K         &kp C        &kp V   &hypermo_sk 3 LSHFT  &lt 2 LEFT_BRACKET  &none       &none    &kp RIGHT_BRACKET  &sk RSHFT  &kp B   &kp H        &comma_morph  &dot_morph     &lt 5 SLASH       &none
+&magic 6 0  &kp HOME      &kp END      &kp LEFT      &kp RIGHT            &lt 5 BACKSPACE      &lt 1 ESCAPE        &kp DELETE  &kp TAB  &kp RETURN         &kp SPACE          &kp DOWN     &kp UP        &kp PAGE_DOWN  &kp PAGE_UP       &none
             >;
         };
 
@@ -255,12 +255,12 @@
 
         Navigation_Left {
             bindings = <
-&none  &none  &none     &none     &none                                                                          &none  &none  &none  &none  &none
-&none  &none  &none     &none     &none      &none                                                        &none  &none  &none  &none  &none  &none
-&none  &none  &kp BSPC  &kp UP    &kp DEL    &none                                                        &none  &none  &none  &none  &none  &none
-&none  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PG_UP                                                    &none  &none  &none  &none  &none  &none
-&none  &mo 4  &kp HOME  &none     &kp END    &kp PG_DN  &none      &none    &none    &none  &none  &none  &none  &none  &none  &none  &none  &none
-&none  &none  &none     &none     &none                 &kp SPACE  &kp RET  &kp TAB  &none  &none  &none         &none  &none  &none  &none  &none
+&none  &none  &none     &none     &none                                                                              &none  &none  &none  &none  &none
+&none  &none  &none     &none     &none      &none                                                            &none  &none  &none  &none  &none  &none
+&none  &none  &kp BSPC  &kp UP    &kp DEL    &kp PAGE_UP                                                      &none  &none  &none  &none  &none  &none
+&none  &none  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN                                                    &none  &none  &none  &none  &none  &none
+&none  &mo 4  &kp HOME  &none     &kp END    &none          &none      &none    &none    &none  &none  &none  &none  &none  &none  &none  &none  &none
+&none  &none  &none     &none     &none                     &kp SPACE  &kp RET  &kp TAB  &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
 
@@ -268,9 +268,9 @@
             bindings = <
 &none  &none            &none           &none                   &none                                                                                                               &none     &none     &none       &none   &none
 &none  &kp LG(N1)       &kp LG(N2)      &kp LG(N3)              &kp LG(N4)             &kp LG(N5)                                                                    &none          &none     &none     &none       &none   &none
-&none  &kp LG(Q)        &kp LG(W)       &cmdhold L LC(LS(TAB))  &cmdhold D LC(TAB)     &cmdsfthold F LG(LS(G))                                                       &none          &kp BSPC  &kp UP    &kp DELETE  &none   &none
-&none  &mt LCTRL LG(A)  &mt LALT LG(S)  &mt LSHFT LG(R)         &mt LGUI LG(T)         &cmdhold F LG(G)                                                              &kp PAGE_UP    &kp LEFT  &kp DOWN  &kp RIGHT   &none   &none
-&none  &kp LG(X)        &kp LG(Z)       &kp LG(K)               &kp LG(C)              &kp LG(V)                &none  &none  &none  &none    &none       &none      &kp PAGE_DOWN  &kp HOME  &none     &kp END     &mo 5   &none
+&none  &kp LG(Q)        &kp LG(W)       &cmdhold L LC(LS(TAB))  &cmdhold D LC(TAB)     &cmdsfthold F LG(LS(G))                                                       &kp PAGE_UP    &kp BSPC  &kp UP    &kp DELETE  &none   &none
+&none  &mt LCTRL LG(A)  &mt LALT LG(S)  &mt LSHFT LG(R)         &mt LGUI LG(T)         &cmdhold F LG(G)                                                              &kp PAGE_DOWN  &kp LEFT  &kp DOWN  &kp RIGHT   &none   &none
+&none  &kp LG(X)        &kp LG(Z)       &kp LG(K)               &kp LG(C)              &kp LG(V)                &none  &none  &none  &none    &none       &none      &none          &kp HOME  &none     &kp END     &mo 5   &none
 &none  &none            &none           &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)                           &mo 5  &none  &none  &kp TAB  &kp RETURN  &kp SPACE                 &trans    &trans    &trans      &trans  &none
             >;
         };
