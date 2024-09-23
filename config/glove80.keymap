@@ -108,6 +108,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            flavor = "balanced";
         };
 
         hypermo_sk: hypermo_sk {
@@ -117,6 +118,43 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        de_ae: de_ae {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_AE";
+            bindings = <&de_ae_lower>, <&de_ae_upper>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        de_oe: de_oe {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_OE";
+            bindings = <&de_oe_lower>, <&de_oe_upper>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        de_ue: de_ue {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_UE";
+            bindings = <&de_ue_lower>, <&de_ue_upper>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        de_sz: de_sz {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_SZ";
+            bindings = <&de_sz_lower>, <&de_sz_upper>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
     };
 
@@ -195,6 +233,118 @@
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER &kp LSHFT &kp LCTRL &kp LALT &kp LGUI>;
 
             label = "HYPERMO";
+        };
+
+        de_ae_lower: de_ae_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp E &kp N4>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DE_AE_LOWER";
+        };
+
+        de_ae_upper: de_ae_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp C &kp N4>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DE_AE_UPPER";
+        };
+
+        de_oe_lower: de_oe_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp N6>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DE_OE_LOWER";
+        };
+
+        de_oe_upper: de_oe_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp N6>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DE_OE_UPPER";
+        };
+
+        de_ue_lower: de_ue_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp C>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DE_UE_LOWER";
+        };
+
+        de_ue_upper: de_ue_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp C>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DE_UE_UPPER";
+        };
+
+        de_sz_lower: de_sz_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp F>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DE_SZ_LOWER";
+        };
+
+        de_sz_upper: de_sz_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp N1 &kp E &kp N9 &kp E>,
+                <&macro_release>,
+                <&kp RALT>;
+
+            label = "DE_SZ_UPPER";
         };
     };
 
