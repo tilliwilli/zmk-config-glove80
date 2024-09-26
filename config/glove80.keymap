@@ -254,6 +254,24 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        excl_skshft: excl_skshft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EXCL_SKSHFT";
+            bindings = <&sk LSHFT>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        question_skshft: question_skshft {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUESTION_SKSHFT";
+            bindings = <&sk RSHFT>, <&kp QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     macros {
@@ -456,28 +474,12 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_de_ae {
-            bindings = <&hml_de_ae LS(LGUI) 0>;
-            key-positions = <38 37>;
-            timeout-ms = <30>;
-        };
-
-        combo_de_sz {
-            bindings = <&hml_de_sz LS(LALT) 0>;
-            key-positions = <37 36>;
-            timeout-ms = <30>;
-        };
-
-        combo_de_ue {
-            bindings = <&hmr_de_ue RS(RGUI) 0>;
-            key-positions = <41 42>;
-            timeout-ms = <30>;
-        };
-
-        combo_de_oe {
-            bindings = <&hmr_de_oe RS(RALT) 0>;
-            key-positions = <42 43>;
-            timeout-ms = <30>;
+        combo_capsword {
+            bindings = <&caps_word>;
+            key-positions = <47 62>;
+            layers = <0>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <100>;
         };
     };
 
@@ -494,12 +496,12 @@
             // | MAGIC | HOME| END | LEFT | RIGHT|      | BSPC  | DEL   | LALT  | | RALT  | RET   | SPACE |      |  UP   | DOWN  |  [   |   ]   | PGDN |
 
             bindings = <
-&htw F11 F1  &htw F12 F2       &kp F3             &kp F4        &kp F5                                                                                                         &kp F6       &kp F7        &kp F8         &kp F9            &kp F10
-&kp GRAVE    &kp N1            &kp N2             &kp N3        &kp N4       &kp N5                                                                                    &kp N6  &kp N7       &kp N8        &kp N9         &kp N0            &kp EQUAL
-&de_sz       &kp Q             &kp W              &kp L         &kp D        &kp P                                                                                     &kp J   &kp M        &kp O         &kp Y          &kp SINGLE_QUOTE  &de_oe
-&de_ae       &hml LCTRL A      &hml LALT S        &hml LSHFT R  &hml LGUI T  &kp G                                                                                     &kp F   &hmr RGUI N  &hmr RSHFT E  &hmr RALT I    &hmr RCTRL U      &de_ue
-&sk LSHFT    &lt 5 X           &kp Z              &kp K         &kp C        &kp V   &hypermo 4       &kp DOWN      &kp UP      &kp LEFT    &kp RIGHT     &kp TAB      &kp B   &kp H        &comma_morph  &dot_morph     &lt 6 SLASH       &kp MINUS
-&magic 7 0   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &lpar_lt      &rpar_gt             &lt 6 BACKSPACE  &lt 2 ESCAPE  &kp DELETE  &caps_word  &lt 1 RETURN  &lt 3 SPACE          &kp HOME     &kp PAGE_UP   &kp PAGE_DOWN  &kp END           &kp BACKSLASH
+&kp F1         &kp F2            &kp F3       &kp F4        &kp F5                                                                                                         &kp F6       &kp F7        &kp F8       &kp F9             &kp F10
+&kp F11        &kp N1            &kp N2       &kp N3        &kp N4       &kp N5                                                                                    &kp N6  &kp N7       &kp N8        &kp N9       &kp N0             &kp F12
+&kp GRAVE      &kp LEFT_BRACKET  &kp W        &kp L         &kp D        &kp P                                                                                     &kp J   &kp M        &kp O         &kp Y        &kp RIGHT_BRACKET  &kp EQUAL
+&de_sz         &hml LCTRL A      &hml LALT S  &hml LSHFT R  &hml LGUI T  &kp G                                                                                     &kp F   &hmr RGUI N  &hmr RSHFT E  &hmr RALT I  &hmr RCTRL U       &de_oe
+&sk BACKSLASH  &excl_skshft      &kp Z        &kp K         &kp C        &kp V   &hypermo 4       &kp DOWN      &kp UP      &kp LEFT    &kp RIGHT     &kp TAB      &kp B   &kp H        &comma_morph  &dot_morph   &question_skshft   &kp SLASH
+&magic 7 0     &kp Q             &kp X        &lpar_lt      &rpar_gt             &lt 6 BACKSPACE  &lt 2 ESCAPE  &kp DELETE  &caps_word  &lt 1 RETURN  &lt 3 SPACE          &kp MINUS    &de_ae        &de_ue       &kp SINGLE_QUOTE   &kp SEMICOLON
             >;
         };
 
