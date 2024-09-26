@@ -500,7 +500,7 @@
 &kp F11        &kp N1            &kp N2       &kp N3        &kp N4       &kp N5                                                                                    &kp N6  &kp N7       &kp N8        &kp N9       &kp N0             &kp F12
 &kp GRAVE      &kp LEFT_BRACKET  &kp W        &kp L         &kp D        &kp P                                                                                     &kp J   &kp M        &kp O         &kp Y        &kp RIGHT_BRACKET  &kp EQUAL
 &de_sz         &hml LCTRL A      &hml LALT S  &hml LSHFT R  &hml LGUI T  &kp G                                                                                     &kp F   &hmr RGUI N  &hmr RSHFT E  &hmr RALT I  &hmr RCTRL U       &de_oe
-&sk BACKSLASH  &excl_skshft      &kp Z        &kp K         &kp C        &kp V   &hypermo 4       &kp DOWN      &kp UP      &kp LEFT    &kp RIGHT     &kp TAB      &kp B   &kp H        &comma_morph  &dot_morph   &question_skshft   &kp SLASH
+&kp BACKSLASH  &excl_skshft      &kp Z        &kp K         &kp C        &kp V   &hypermo 4       &kp DOWN      &kp UP      &kp LEFT    &kp RIGHT     &kp TAB      &kp B   &kp H        &comma_morph  &dot_morph   &question_skshft   &kp SLASH
 &magic 7 0     &kp Q             &kp X        &lpar_lt      &rpar_gt             &lt 6 BACKSPACE  &lt 2 ESCAPE  &kp DELETE  &caps_word  &lt 1 RETURN  &lt 3 SPACE          &kp MINUS    &de_ae        &de_ue       &kp SINGLE_QUOTE   &kp SEMICOLON
             >;
         };
