@@ -11,20 +11,24 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &lt {
-    quick-tap-ms = <150>;
+    quick-tap-ms = <200>;
     flavor = "balanced";
 };
 
 &mt {
     flavor = "balanced";
-    quick-tap-ms = <150>;
+    quick-tap-ms = <200>;
 };
 
-&sk { quick-release; };
+&sk {
+    quick-release;
+    release-after-ms = <500>;
+};
 
-&sl { ignore-modifiers; };
-
-&caps_word { continue-list = <UNDERSCORE BACKSPACE DELETE MINUS LEFT RIGHT>; };
+&sl {
+    ignore-modifiers;
+    release-after-ms = <500>;
+};
 
 / {
     behaviors {
@@ -43,8 +47,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             flavor = "balanced";
             hold-trigger-key-positions = <5 6 7 8 9 16 17 18 19 20 21 28 29 30 31 32 33 40 41 42 43 44 45 57 58 59 60 61 62 63 73 74 75 76 77 78 79 56 72 55 52 53 54 70 71 69>;
@@ -57,8 +61,8 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <150>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <200>;
             require-prior-idle-ms = <100>;
             flavor = "balanced";
             hold-trigger-key-positions = <57 73 74 56 72 55 52 53 54 70 71 69 0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36 37 38 39 46 47 48 49 50 51 52 64 65 66 67 68 69 70>;
@@ -111,7 +115,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            quick-tap-ms = <150>;
+            quick-tap-ms = <200>;
         };
 
         hypermo_sk: hypermo_sk {
@@ -189,22 +193,13 @@
             mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
-        sk_rsft_caps: sk_rsft_caps {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SK_RSFT_CAPS";
-            bindings = <&sk RSHFT>, <&caps_word>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
-        };
-
         ht_kp_sk: ht_kp_sk {
             compatible = "zmk,behavior-hold-tap";
             label = "HT_KP_SK";
             bindings = <&kp>, <&sk>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             flavor = "tap-preferred";
         };
     };
