@@ -72,7 +72,7 @@
         comma_morph: comma_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "COMMA_MORPH";
-            bindings = <&kp COMMA>, <&kp SEMICOLON>;
+            bindings = <&kp COMMA>, <&comma_shift>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -81,7 +81,7 @@
         dot_morph: dot_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "DOT_MORPH";
-            bindings = <&kp DOT>, <&kp COLON>;
+            bindings = <&kp DOT>, <&dot_shift>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -211,6 +211,26 @@
             #binding-cells = <2>;
             tapping-term-ms = <2000>;
             flavor = "tap-preferred";
+        };
+
+        comma_shift: comma_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_SHIFT";
+            bindings = <&kp SEMICOLON>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LGUI|MOD_LALT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+        };
+
+        dot_shift: dot_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOT_SHIFT";
+            bindings = <&kp COLON>, <&kp GREATER_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LGUI|MOD_LALT|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RALT|MOD_RGUI)>;
         };
     };
 
