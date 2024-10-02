@@ -424,10 +424,10 @@
             bindings = <
 &kp F1                &kp F2            &kp F3       &kp F4        &kp F5                                                                                                                 &kp F6       &kp F7        &kp F8       &kp F9             &kp F10
 &kp GRAVE             &kp N1            &kp N2       &kp N3        &kp N4         &kp N5                                                                                          &kp N6  &kp N7       &kp N8        &kp N9       &kp N0             &kp F12
-&kp TAB               &kp Q             &kp W        &kp L         &kp D          &kp P                                                                                           &kp K   &kp M        &kp O         &kp Y        &kp SEMICOLON      &kp EQUAL
+&kp TAB               &kp Q             &kp W        &kp L         &kp D          &kp P                                                                                           &kp J   &kp M        &kp O         &kp Y        &kp SEMICOLON      &kp EQUAL
 &kp BACKSPACE         &hml LCTRL A      &hml LALT S  &hml LSHFT R  &hml LGUI T    &kp G                                                                                           &kp F   &hmr RGUI N  &hmr RSHFT E  &hmr RALT I  &hmr RCTRL U       &kp SINGLE_QUOTE
-&kp LEFT_PARENTHESIS  &lt 7 MINUS       &kp Z        &kp X         &kp C          &kp V   &hypermo 2   &kp DOWN      &kp UP      &kp LEFT    &kp RIGHT     &lt 6 TAB              &kp B   &kp H        &comma_morph  &dot_morph   &lt 8 SLASH        &kp RIGHT_PARENTHESIS
-&magic 10 0           &kp LEFT_BRACKET  &kp RA(S)    &de_ae_us     &kp BACKSLASH          &lt 8 SPACE  &lt 3 ESCAPE  &kp DELETE  &caps_word  &lt 5 RETURN  &ht_sk_kp RSHFT SPACE          &kp J        &de_ue_us     &de_oe_us    &kp RIGHT_BRACKET  &long_hold C_POWER 0
+&kp LEFT_PARENTHESIS  &lt 7 X           &kp Z        &kp K         &kp C          &kp V   &hypermo 2   &kp DOWN      &kp UP      &kp LEFT    &kp RIGHT     &lt 6 TAB              &kp B   &kp H        &comma_morph  &dot_morph   &lt 8 SLASH        &kp RIGHT_PARENTHESIS
+&magic 10 0           &kp LEFT_BRACKET  &kp RA(S)    &de_ae_us     &kp BACKSLASH          &lt 8 SPACE  &lt 3 ESCAPE  &kp DELETE  &caps_word  &lt 5 RETURN  &ht_sk_kp RSHFT SPACE          &kp MINUS    &de_ue_us     &de_oe_us    &kp RIGHT_BRACKET  &long_hold C_POWER 0
             >;
         };
 
@@ -459,7 +459,7 @@
 &kp LC(LA(LG(GRAVE)))  &kp LC(LA(LG(N1)))       &kp LC(LA(LG(N2)))      &kp LC(LA(LG(N3)))       &kp LC(LA(LG(N4)))      &kp LC(LA(LG(N5)))                                                          &none          &none   &none      &none    &none              &none
 &kp LC(LA(LG(TAB)))    &kp LC(LA(LG(F7)))       &kp LC(LA(LG(W)))       &kp LC(LA(LG(L)))        &kp LC(LA(LG(D)))       &kp LC(LA(LG(P)))                                                           &kp BACKSPACE  &kp N7  &kp N8     &kp N9   &none              &none
 &kp BACKSPACE          &mt LCTRL LC(LA(LG(A)))  &mt LALT LC(LA(LG(S)))  &mt LSHFT LC(LA(LG(R)))  &mt LGUI LC(LA(LG(T)))  &kp LC(LA(LG(G)))                                                           &kp KP_MINUS   &kp N4  &kp N5     &kp N6   &kp KP_PLUS        &none
-&kp LEFT_PARENTHESIS   &kp LC(LA(LG(MINUS)))    &kp LC(LA(LG(Z)))       &kp LC(LA(LG(X)))        &kp LC(LA(LG(C)))       &kp LC(LA(LG(V)))   &none  &none  &none  &trans          &trans     &trans  &kp KP_DIVIDE  &kp N1  &kp N2     &kp N3   &kp KP_MULTIPLY    &kp RIGHT_PARENTHESIS
+&kp LEFT_PARENTHESIS   &kp LC(LA(LG(X)))        &kp LC(LA(LG(Z)))       &kp LC(LA(LG(K)))        &kp LC(LA(LG(C)))       &kp LC(LA(LG(V)))   &none  &none  &none  &trans          &trans     &trans  &kp KP_DIVIDE  &kp N1  &kp N2     &kp N3   &kp KP_MULTIPLY    &kp RIGHT_PARENTHESIS
 &none                  &kp LEFT_BRACKET         &kp LC(LA(LG(F10)))     &kp LC(LA(LG(F11)))      &kp LC(LA(LG(F12)))                         &none  &mo 3  &none  &kp RA(RS(N2))  &kp COLON  &kp N0                 &kp N0  &kp COMMA  &kp DOT  &kp RIGHT_BRACKET  &none
             >;
         };
@@ -481,8 +481,8 @@
 &none                 &trans            &trans                &trans                 &trans            &trans                                                              &trans          &trans             &trans      &trans             &trans             &none
 &none                 &kp GRAVE         &kp AT_SIGN           &kp CARET              &kp LEFT_BRACKET  &kp HASH                                                            &kp PERCENT     &kp RIGHT_BRACKET  &kp DOLLAR  &kp SINGLE_QUOTE   &kp SEMICOLON      &none
 &kp BACKSPACE         &kp TILDE         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE    &kp ASTERISK                                                        &kp UNDERSCORE  &kp RIGHT_BRACE    &kp EQUAL   &kp DOUBLE_QUOTES  &kp PLUS           &kp SINGLE_QUOTE
-&kp LEFT_PARENTHESIS  &kp MINUS         &kp EXCLAMATION       &kp QUESTION           &kp LESS_THAN     &kp PIPE      &kp SEMICOLON  &none      &none  &none  &none  &none  &kp AMPERSAND   &kp GREATER_THAN   &kp COMMA   &kp DOT            &kp SLASH          &kp RIGHT_PARENTHESIS
-&none                 &kp LEFT_BRACKET  &none                 &none                  &kp BACKSLASH                   &kp SPACE      &kp COLON  &none  &none  &mo 5  &none                  &none              &none       &none              &kp RIGHT_BRACKET  &none
+&kp LEFT_PARENTHESIS  &kp BACKSLASH     &kp EXCLAMATION       &kp QUESTION           &kp LESS_THAN     &kp PIPE      &kp SEMICOLON  &none      &none  &none  &none  &none  &kp AMPERSAND   &kp GREATER_THAN   &kp COMMA   &kp DOT            &kp SLASH          &kp RIGHT_PARENTHESIS
+&none                 &kp LEFT_BRACKET  &none                 &none                  &kp BACKSLASH                   &kp SPACE      &kp COLON  &none  &none  &mo 5  &none                  &kp MINUS          &none       &none              &kp RIGHT_BRACKET  &none
             >;
         };
 
@@ -514,7 +514,7 @@
 &kp LG(GRAVE)      &kp LG(N1)       &kp LG(N2)      &kp LG(N3)              &kp LG(N4)             &kp LG(N5)                                                                  &none          &none       &kp PAGE_UP        &none            &none             &kp C_BRIGHTNESS_DEC
 &kp LG(TAB)        &kp LG(Q)        &kp LG(W)       &cmdhold L LC(LS(TAB))  &cmdhold D LC(TAB)     &cmdsfthold F LG(LS(G))                                                     &kp PAGE_UP    &kp BSPC    &kp UP             &kp DELETE       &none             &none
 &kp LG(BACKSPACE)  &mt LCTRL LG(A)  &mt LALT LG(S)  &mt LSHFT LG(R)         &mt LGUI LG(T)         &cmdhold F LG(G)                                                            &kp PAGE_DOWN  &kp LEFT    &kp DOWN           &kp RIGHT        &none             &none
-&none              &kp LG(MINUS)    &kp LG(Z)       &kp LG(X)               &kp LG(C)              &kp LG(V)                &none  &none  &none  &none  &none       &kp TAB    &none          &kp HOME    &kp PAGE_DOWN      &kp END          &mo 8             &none
+&none              &kp LG(X)        &kp LG(Z)       &kp LG(K)               &kp LG(C)              &kp LG(V)                &none  &none  &none  &none  &none       &kp TAB    &none          &kp HOME    &kp PAGE_DOWN      &kp END          &mo 8             &none
 &none              &none            &none           &kp LG(LEFT_BRACKET)    &kp LG(RIGHT_BRACKET)                           &mo 8  &none  &none  &none  &kp RETURN  &kp SPACE                 &none       &none              &none            &none             &trans
             >;
         };
